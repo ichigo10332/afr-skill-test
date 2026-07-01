@@ -15,6 +15,11 @@ export default function ListaUsuarios() {
           - Prop "keyExtractor": retorna el id de cada item
           - Prop "renderItem": muestra el nombre en un Text */}
       {/* tu código aquí */}
+      <FlatList
+        data={usuarios}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <Text style={{fontSize:40,color:'white',fontWeight:800}}>{item.nombre}</Text>}
+      />
     </View>
   );
 }
